@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Verso do Dia</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>Verso do Dia</h1>
+      <p class="subtitle">Uma reflexão diária para o seu dia</p>
+      <div class="header-controls">
+        <button id="settings-btn" class="btn ghost">⚙️ Configurações</button>
+        <button id="theme-toggle" class="btn">Tema</button>
+      </div>
+    </header>
+
+    <section class="card" id="verse-card" aria-live="polite">
+      <div class="verse" id="verse-text">Carregando verso...</div>
+      <div class="reference" id="verse-ref"></div>
+      <div class="reflection" id="verse-reflection"></div>
+
+      <div class="actions">
+        <button id="copy-btn" class="btn">Copiar</button>
+        <button id="share-btn" class="btn primary">Compartilhar WhatsApp</button>
+        <button id="image-btn" class="btn">Gerar imagem</button>
+      </div>
+    </section>
+
+    <aside id="settings-panel" class="settings-panel" aria-hidden="true">
+      <h3>Configurações</h3>
+      <label for="mode-select">Modo de exibição</label>
+      <select id="mode-select">
+        <option value="rotation">Rotacionar por dia (padrão)</option>
+        <option value="seeded">Aleatório fixo por dia (seed)</option>
+        <option value="random">Aleatório por visita</option>
+        <option value="shuffle">Sem repetições (persistente)</option>
+        <option value="yearly">Ciclo anual (preenche 365 dias)</option>
+      </select>
+
+      <div class="settings-note">As configurações são salvas no navegador.</div>
+      <div class="settings-actions">
+        <button id="settings-close" class="btn">Fechar</button>
+      </div>
+    </aside>
+
+    <footer class="footer">
+      <small>Contato: passandotempocomdeus@gmail.com</small>
+    </footer>
+  </main>
+
+  <script src="script.js" defer></script>
+  <script id="verses-data" type="application/json">
+  [
+    {
+      "reference": "Salmos 23:1",
+      "text": "O Senhor é o meu pastor; nada me faltará.",
+      "reflection": "Confie na provisão e cuidado de Deus mesmo nos momentos de incerteza."
+    },
+    {
+      "reference": "Filipenses 4:13",
+      "text": "Posso todas as coisas naquele que me fortalece.",
+      "reflection": "A força vem ao confiar em Deus — peça e caminhe com coragem."
+    },
+    {
+      "reference": "Mateus 11:28",
+      "text": "Vinde a mim, todos os que estais cansados e oprimidos, e eu vos aliviarei.",
+      "reflection": "Descanse suas preocupações em Cristo; Ele oferece alívio para a alma."
+    },
+    {
+      "reference": "Jeremias 29:11",
+      "text": "Porque eu bem sei os pensamentos que penso de vós, diz o Senhor: pensamentos de paz, e não de mal, para vos dar o fim que esperais.",
+      "reflection": "Deus tem um plano e propósito — mantenha esperança mesmo quando o caminho é incerto."
+    },
+    {
+      "reference": "Provérbios 3:5-6",
+      "text": "Confia no Senhor de todo o teu coração, e não te estribes no teu próprio entendimento.",
+      "reflection": "Submeta suas decisões a Deus; Ele dirigirá seus passos quando você confiar plenamente."
+    }
+  ]
+  </script>
+</body>
+</html>
